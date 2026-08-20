@@ -120,7 +120,6 @@ runs:
         ECR_REGISTRY: ${{ inputs.ecr-registry }}
         GIT_SHA: ${{ github.sha }}
         KUBE_NAMESPACE: ${{ inputs.kube-namespace }}
-        VALUES_FILE: ./deploy/helm/values-${{ inputs.app-environment }}.yaml
         BRANCH_NAME: ${{ inputs.branch-name }}
         RELEASE_NAME: ${{ inputs.release-name }}
         ENVIRONMENT: ${{ inputs.app-environment }}
