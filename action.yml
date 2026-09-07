@@ -140,7 +140,8 @@ runs:
             *Environment:* `${{ inputs.app-environment}}`
             *Repository:* `${{ github.repository }}`
             *Run:* ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
-
+            *Triggered by:* ${{ github.actor }}
+            
     - name: Notify Slack of failure
       if: failure() && steps.deploy.outcome == 'failure' && inputs.slack-notification-on-failure == 'true'
       uses: slackapi/slack-github-action@dcb1066f776dd043e64d0e8ba94ca15cc7e1875d # V4.0.0
@@ -155,3 +156,4 @@ runs:
             *Environment:* `${{ inputs.app-environment}}`
             *Repository:* `${{ github.repository }}`
             *Run:* ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+            *Triggered by:* ${{ github.actor }}
